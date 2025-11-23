@@ -21,7 +21,7 @@ WebApplication app = builder.Build();
 var loggerFactory = app.Services.GetRequiredService<ILoggerFactory>();
 var jsonOptions = app.Services.GetRequiredService<IOptions<JsonOptions>>();
 var agentFactory = new DataverseAgentFactory(builder.Configuration, loggerFactory, jsonOptions.Value.SerializerOptions);
-app.MapAGUI("/", agentFactory.CreateProverbsAgent());
+app.MapAGUI("/", agentFactory.CreateDataverseAgent());
 
 await app.RunAsync();
 
@@ -77,7 +77,7 @@ public class DataverseAgentFactory
         _serviceClient = new ServiceClient(connectionString);
     }
 
-    public AIAgent CreateProverbsAgent()
+    public AIAgent CreateDataverseAgent()
     {
         var chatClient = _openAiClient.GetChatClient("gpt-5.1").AsIChatClient();
 

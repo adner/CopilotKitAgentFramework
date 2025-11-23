@@ -3,7 +3,9 @@
     "allow": [
       "Bash(git init:*)",
       "Bash(git remote add:*)",
-      "Bash(test:*)"
+      "Bash(test:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
