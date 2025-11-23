@@ -1,4 +1,4 @@
-# CopilotKit Agent Framework + AG-UI + CopilotKit 
+# CopilotKit + Microsoft Agent Framework + AG-UI
 
 This is an example of an agent with a rich user interface, that uses CopilotKit for the front-end, and **Microsoft Agent Framework** as the backend, communicating using the [AG-UI protocol](https://github.com/ag-ui-protocol/ag-ui).
 
